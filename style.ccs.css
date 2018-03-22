@@ -1,0 +1,45 @@
+body{
+    background-color: #a3a3a3;
+}
+h2{
+	font-size:20px;
+}
+/*@import url(normalize.css);*/
+
+@import url(presets.css);
+
+.container > *  {
+	border: 1px solid black;
+}
+@media screen and (min-width: 40em) { /* 640px */
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	header, main, footer {
+		flex: 1 1 100%;
+	}
+	[class^="zijkolom"] {
+		flex: auto;
+	}
+}
+@media screen and (min-width: 48em) { /* 768px */
+	main { flex: 2 1 0%; }
+	.zijkolom-1 { flex: 1 1 0%; }
+	.zijkolom-2 { flex: 1 1 100%; }
+}
+@media screen and (min-width: 64em) { /* 1024px */
+	main { flex: 3 1 0%; }
+	.zijkolom-1, .zijkolom-2 {
+		flex: 1 1 0%;
+	}
+}
+@media screen and (min-width: 80em) { /* 1280px */
+	main				{ flex: 3; }
+	.zijkolom-1 { flex: 1.5; }
+	.zijkolom-2 { flex: 1; }
+	.zijkolom-1 { order: 1; }
+	main				{ order: 2; }
+	.zijkolom-2 { order: 3 }
+	footer			{ order: 4; }
+}
