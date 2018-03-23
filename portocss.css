@@ -1,0 +1,8 @@
+div.container-fluid div:nth-of-type(even)
+{
+   background-color: Green;
+}
+div.container-fluid div:nth-of-type(odd)
+{
+    background-color: Red;
+}
